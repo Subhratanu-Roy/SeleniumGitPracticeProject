@@ -1,0 +1,11 @@
+/test_screenshots/
+*.png
+*.html
+
+/test-output/
+*.png
+*.html
+*.css
+*.js
+*.xml
+
