@@ -26,6 +26,7 @@ public class Base {
 	public Log log = new Log();
 	public static ExcelUtility excelUtility;
 	String mode = null;
+	String testdatapath = null;
 
 	@BeforeSuite
 	public void init() throws IOException {
@@ -35,7 +36,8 @@ public class Base {
 		properties = new Properties();
 		properties.load(fis);
 		// System.out.println(properties.getProperty("testdatapath"));
-		excelUtility = new ExcelUtility(properties.getProperty("testdatapath"));
+		testdatapath = System.getProperty("user.dir")+"\\testdata.xlsx";
+		excelUtility = new ExcelUtility(testdatapath);
 		// browser = properties.getProperty("browser");
 //			System.out.println("Browser: "+ browser);
 //			log.info("current browser: "+ browser);

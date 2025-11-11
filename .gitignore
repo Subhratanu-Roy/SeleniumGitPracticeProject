@@ -1,11 +1,4 @@
-/test_screenshots/
-*.png
-*.html
-
-/test-output/
-*.png
-*.html
-*.css
-*.js
-*.xml
+test-output/
+test_screenshots/
+pom.xml
 

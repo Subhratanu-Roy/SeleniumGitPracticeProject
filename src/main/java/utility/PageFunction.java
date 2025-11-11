@@ -59,5 +59,14 @@ public class PageFunction {
 		return null;
 
 	}
+	
+	public static void waitForElement(WebElement ele, WebDriver driver) {
+		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));
+		w.until(ExpectedConditions.visibilityOf(ele));
+		
+		
+	}
+
+	
 
 }

@@ -17,6 +17,9 @@ public class LoginPage extends Base {
 
 	@FindBy(id = "login")
 	private WebElement login;
+	
+	@FindBy(xpath = "//*[contains(text(), 'Incorrect')]")
+	private WebElement errmsg;
 
 	public LoginPage() {
 		PageFactory.initElements(driver, this);
@@ -28,6 +31,12 @@ public class LoginPage extends Base {
 		PageFunction.click(driver, login);
 		return new HomePage();
 
+	}
+	
+	public String getErrorMsg() {
+		System.out.println("waiting for error message");
+		PageFunction.waitForElement(errmsg, driver);
+		return errmsg.getText();
 	}
 
 }
