@@ -14,8 +14,8 @@ public class TC_InvalidLogin extends Base {
 	void tc_invalidLogin() {
 
 		loadWebBrowser();
-		String username = "test@mail.com";
-		String password = "test";
+		String username = "testinvalidlogin@mail.com";
+		String password = "test122345";
 		String actualErrMsg = "Incorrect email or password.";
 		obj_loginPage = new LoginPage();
 		obj_loginPage.login(username, password);
