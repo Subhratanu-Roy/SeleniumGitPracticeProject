@@ -1,6 +1,6 @@
 package testcases;
 
-public class TC_ForgetPassword {
+public class TC_ForgetPassword extends Base{
 
 	@Test
 	void tc() {
